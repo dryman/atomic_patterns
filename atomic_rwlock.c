@@ -4,92 +4,71 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <pthread.h>
-#include <stdatomic.h>
+#include "op_atomic.h"
 #include <stdbool.h>
+#include <stdint.h>
 #include <limits.h>
 #include <unistd.h>
 
 ATOMIC_HACK_DECLARE
-static atomic_int rwlock = 0;
-static int counter = 0;
+extern uint64_t count;
+a_int32_t lock = 0;
 
-void* reader_thread(void *arg)
+void* test(void *arg)
 {
-  // int_ptr does not have to be atomic, as its visibility
-  // is guarded by the atomic lock.
-  for (int i = 0; i < 10; i++)
-    {
-      sleep(1);
-      // If rwlock is INT_MIN, we are in write mode.
-      // Else, we can have multiple reader thread trying to read
-      // in the critical section.
-      //
-      // We have to use an integer instead of a single bool because
-      // there can be multiple threads in the critical section.
-      if (atomic_fetch_add_explicit(
-        &rwlock, 1,
-        memory_order_acquire) < 0)
-        {   
-          printf("Locked by write\n");
-          atomic_fetch_sub_explicit(&rwlock, 1, memory_order_release);
-          continue;
-        }   
-      // now we can read
-      printf("Read counter %d\n", counter);
-      // No memory read or write can be reordered after
-      // memory_order_release.
-      atomic_fetch_sub_explicit(&rwlock, 1, memory_order_release);
-    }
-  return NULL;
-}
+  const int power2 = *(int*) arg;
+  uint64_t bound = 1L << power2;
+  uint64_t mask = (1L << 4)-1;  // 1/16 use write lock, else read lock
 
-void* writer_thread(void *arg)
-{
-  // int_ptr does not have to be atomic, as its visibility
-  // is guarded by the atomic lock.
-  for (int i = 0; i < 5; i++)
+  for (uint64_t i = 0; i < bound; i++)
     {
-      sleep(1);
-      // Set the rwlock to INT_MIN, only when the value is 0.
-      // 
-      // On compare exchange success, memory_order_acquire
-      // ensures no memory read or write can be reordered 
-      // before this point.
-      // 
-      // On compare exchange failure, expected_bool must
-      // be reload to the expected value (which is 0).
-      // No memory reordering is depending on it so we can
-      // use memory_order_relazed
-      int expected_rwlock = 0;
-      while (!atomic_compare_exchange_weak_explicit(
-        &rwlock, &expected_rwlock, INT_MIN,
-        memory_order_acquire,
-        memory_order_relaxed))
-        {   
-          expected_rwlock = 0;
-          ATOMIC_HACK_OP;
+      if ((i & mask) == 0)
+        { // write lock
+          while (1)
+            {
+              // book write
+              int32_t val = atomic_load_explicit(&lock, memory_order_relaxed);
+              while (!atomic_compare_exchange_weak_explicit
+                     (&lock, &val, val | (1<<31),
+                      memory_order_acq_rel,
+                      memory_order_relaxed))
+                ;
+                //val = atomic_load_explicit(&lock, memory_order_relaxed);
+              val = INT32_MIN;
+              while (atomic_compare_exchange_strong_explicit
+                     (&lock, &val, -1,
+                      memory_order_acquire,
+                      memory_order_relaxed))
+                {
+                  val = INT32_MIN;
+                  ATOMIC_HACK_OP;
+                }
+              break;
+            }
+          count++;
+          atomic_store_explicit(&lock, 0, memory_order_release);
         }
-      // now we can perform side effects
-      counter++;
-      // No memory read or write can be reordered after
-      // memory_order_release.
-      atomic_store_explicit(&rwlock, 0, memory_order_release);
+      else
+        { // read lock
+          while (1)
+            {
+              int32_t val; 
+              do
+                {
+                  val = atomic_load_explicit(&lock,
+                                             memory_order_relaxed);
+                  if (val < 0)
+                    continue;
+                }
+              while (!atomic_compare_exchange_weak_explicit
+                     (&lock, &val, val + 1,
+                      memory_order_acquire,
+                      memory_order_relaxed));
+                break;
+            }
+          asm("nop");
+          atomic_fetch_sub_explicit(&lock, 1, memory_order_release);
+        }
     }
   return NULL;
 }
-
-int main()
-{
-  pthread_t p1, p2, p3, p4;
-  pthread_create(&p1, NULL, reader_thread, NULL);
-  pthread_create(&p2, NULL, reader_thread, NULL);
-  pthread_create(&p3, NULL, writer_thread, NULL);
-  pthread_create(&p4, NULL, writer_thread, NULL);
-  pthread_join(p1, NULL);
-  pthread_join(p2, NULL);
-  pthread_join(p3, NULL);
-  pthread_join(p4, NULL);
-
-  return 0;
-}
-
