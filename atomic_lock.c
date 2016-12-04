@@ -9,12 +9,14 @@
 
 static atomic_bool lock = false;
 static int counter = 0;
+bool global_false = true;
+extern void noop();
 
 void* thread_start(void *arg)
 {
+  bool expected_bool = false;
   for (int i = 0; i < 10000; i++)
     {   
-      bool expected_bool = false;
       // On compare exchange success, memory_order_acquire
       // ensures no memory read or write can be reordered 
       // before this point.
@@ -27,10 +29,15 @@ void* thread_start(void *arg)
         &lock, &expected_bool, true,
         memory_order_acquire,
         memory_order_relaxed))
-        {   
+        {
           expected_bool = false;
-        }   
-      // now we can perform side effect on counter
+          // gcc has a bug. It would ignore the statement above
+          // unless you perform this noop().
+          // asm("nop") doesn't work here.
+          // writing the same algorithm in c++11 has the same problem.
+          noop();
+        }
+        // now we can perform side effect on counter
       counter++;
       // No memory read or write can be reordered after
       // memory_order_release. The side effects are "visible"
@@ -42,6 +49,7 @@ void* thread_start(void *arg)
 
 int main()
 {
+  global_false = false;
   pthread_t p1, p2; 
   pthread_create(&p1, NULL, thread_start, NULL);
   pthread_create(&p2, NULL, thread_start, NULL);
