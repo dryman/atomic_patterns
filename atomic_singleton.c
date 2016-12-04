@@ -9,6 +9,7 @@
 
 static atomic_bool lock = false;
 static int *int_ptr = NULL;
+ATOMIC_HACK_DECLARE
 
 void* thread_start(void *arg)
 {

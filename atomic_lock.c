@@ -10,7 +10,8 @@
 static atomic_bool lock = false;
 static int counter = 0;
 bool global_false = true;
-extern void noop();
+
+ATOMIC_HACK_DECLARE
 
 void* thread_start(void *arg)
 {
@@ -35,7 +36,7 @@ void* thread_start(void *arg)
           // unless you perform this noop().
           // asm("nop") doesn't work here.
           // writing the same algorithm in c++11 has the same problem.
-          noop();
+          ATOMIC_HACK_OP;
         }
         // now we can perform side effect on counter
       counter++;

@@ -9,6 +9,7 @@
 #include <limits.h>
 #include <unistd.h>
 
+ATOMIC_HACK_DECLARE
 static atomic_int rwlock = 0;
 static int counter = 0;
 
@@ -66,6 +67,7 @@ void* writer_thread(void *arg)
         memory_order_relaxed))
         {   
           expected_rwlock = 0;
+          ATOMIC_HACK_OP;
         }
       // now we can perform side effects
       counter++;
