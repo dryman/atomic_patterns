@@ -18,6 +18,10 @@ AC_FUNC_MMAP
 AX_CFLAGS_WARN_ALL
 AX_PTHREAD
 
+LIBS="$PTHREAD_LIBS $LIBS"
+CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+CC="$PTHREAD_CC"
+
 # ugly test to detect gcc and clang that pretends to be gcc
 AS_IF([test "x$GCC" = "xyes"],
   [AS_IF([$CC --version | grep "clang"],
@@ -26,13 +30,40 @@ AS_IF([test "x$GCC" = "xyes"],
   [atomic_LIBS=""])
 AC_SUBST([atomic_LIBS])
 
-LIBS="$LIBS $atomic_LIBS"
+#LIBS="$LIBS $atomic_LIBS"
 
-AC_LANG_PUSH([C])
+AC_DEFUN([AX_ATOMIC_HACK],
+[
+  AC_LANG_PUSH([C])
+  AC_MSG_CHECKING([for atomic data races compiles])
+  AC_COMPILE_IFELSE(
+   [AC_LANG_PROGRAM([$1], [$2])],
+   [AC_MSG_RESULT([yes])],
+   [AC_MSG_ERROR([no])])
+  AC_MSG_CHECKING([for atomic data races runs])
+  AC_RUN_IFELSE(
+     [AC_LANG_PROGRAM([$1], [$2])],
+     [
+      AM_CONDITIONAL([ATOMIC_HACK],
+     		[test "x$(cat conftest_atomic_race)" != "x20000"])
+      AS_IF([test "x$(cat conftest_atomic_race)" = "x20000"],
+       [AC_MSG_RESULT([no need to hack])
+        AC_DEFINE([ATOMIC_HACK_DECLARE],[ ])
+        AC_DEFINE([ATOMIC_HACK_OP],[ ])
+        ],
+       [
+        AC_DEFINE([ATOMIC_HACK_DECLARE], [extern void nop();], [nop declare.])
+        AC_DEFINE([ATOMIC_HACK_OP], [nop()], [Force nop function call.])
+        AC_MSG_RESULT([hack applied])
+       ])
+      rm -f conftest_atomic_race
+     ],
+     [AC_MSG_ERROR([run failed])])
+  AC_LANG_POP([C])
+])
 
-AC_MSG_CHECKING([for atomic data races run])
-AC_RUN_IFELSE(
-[AC_LANG_PROGRAM(
+
+AX_ATOMIC_HACK( 
 [[#include <stddef.h>
 #include <stdio.h>
 #include <pthread.h>
@@ -67,26 +98,8 @@ pthread_join(p2, NULL);
 FILE *f;
 f = fopen("conftest_atomic_race", "w"); if (!f) return 1;
 fprintf(f, "%d\n", counter);
-]])],
-[
- AM_CONDITIONAL([ATOMIC_HACK],
-                [test "x$(cat conftest_atomic_race)" != "x20000"])
- AS_IF([test "x$(cat conftest_atomic_race)" = "x20000"],
-  [AC_MSG_RESULT([no need to hack])
-   AC_DEFINE([ATOMIC_HACK_DECLARE],[ ])
-   AC_DEFINE([ATOMIC_HACK_OP],[ ])
-   ],
-  [
-   AC_DEFINE([ATOMIC_HACK_DECLARE], [extern void nop();], [nop declare.])
-   AC_DEFINE([ATOMIC_HACK_OP], [nop()], [Force nop function call.])
-   AC_MSG_RESULT([hack applied])
-  ])
- rm -f conftest_atomic_race
-],
-[AC_MSG_ERROR([compile or run failed])]
-)
+]])
 
-AC_LANG_POP([C])
 
 
 AC_CONFIG_FILES([Makefile])
