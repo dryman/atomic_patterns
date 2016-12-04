@@ -7,6 +7,7 @@ AM_CONFIG_HEADER([config.h])
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AM_PROG_AR
+AM_PROG_AS
 
 AC_PROG_CC_C11
 AC_C_INLINE
