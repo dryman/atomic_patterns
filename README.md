@@ -8,9 +8,9 @@ Atomic design pattern
 Compile:
 
 ```
+autoreconf -vif
+./configure
 make
-# if using older gcc
-LDFLAGS=-latomic make
 ```
 
 See comments for how it works.
