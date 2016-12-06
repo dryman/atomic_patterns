@@ -2,7 +2,7 @@ bin_PROGRAMS = atomic_lock atomic_singleton \
 no_contention1 no_contention2 \
 pthread_mutex_no_contention pthread_mutex \
 atomic_mutex_no_contetion atomic_mutex atomic_mutex2 \
-atomic_mutex3 atomic_mutex4 \
+atomic_mutex3 atomic_mutex4 atomic_mutex5 \
 atomic_wait_free atomic_cas atomic_cas_handtune \
 atomic_rwlock pthread_rwlock \
 atomic_punch_card
@@ -18,6 +18,7 @@ atomic_mutex_SOURCES = atomic_mutex.c main.c
 atomic_mutex2_SOURCES = atomic_mutex2.c main.c
 atomic_mutex3_SOURCES = atomic_mutex3.c main.c
 atomic_mutex4_SOURCES = atomic_mutex4.c main.c
+atomic_mutex5_SOURCES = atomic_mutex5.c main.c
 atomic_wait_free_SOURCES = atomic_wait_free.c main.c
 atomic_cas_SOURCES = atomic_cas.c main.c
 atomic_cas_handtune_SOURCES = atomic_cas_handtune.s main.c
