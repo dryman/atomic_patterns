@@ -1,5 +1,6 @@
 bin_PROGRAMS = \
 nc_thread_local \
+nc_address \
 nc_atomic_mutex1 \
 nc_atomic_mutex2 \
 nc_atomic_mutex3 \
@@ -13,6 +14,10 @@ nc_atomic_rwlock_w \
 nc_atomic_punch_card_r \
 nc_atomic_punch_card_w \
 atomic_wait_free \
+atomic_wait_free_8 \
+atomic_wait_free_16 \
+atomic_wait_free_32 \
+atomic_wait_free_64 \
 pthread_mutex \
 atomic_mutex1 \
 atomic_mutex2 \
@@ -63,6 +68,7 @@ atomic_cas \
 atomic_cas_handtune
 
 nc_thread_local_SOURCES = nc_thread_local.c main.c
+nc_address_SOURCES = nc_address.c main.c
 nc_atomic_mutex1_SOURCES = nc_atomic_mutex1.c main.c
 nc_atomic_mutex2_SOURCES = nc_atomic_mutex2.c main.c
 nc_atomic_mutex3_SOURCES = nc_atomic_mutex3.c main.c
@@ -77,6 +83,15 @@ nc_atomic_punch_card_r_SOURCES = nc_atomic_punch_card_r.c main.c
 nc_atomic_punch_card_w_SOURCES = nc_atomic_punch_card_w.c main.c
 
 atomic_wait_free_SOURCES = atomic_wait_free.c main.c
+atomic_wait_free_CPPFLAGS = -DSLOT=1
+atomic_wait_free_8_SOURCES = atomic_wait_free.c main.c
+atomic_wait_free_8_CPPFLAGS = -DSLOT=8
+atomic_wait_free_16_SOURCES = atomic_wait_free.c main.c
+atomic_wait_free_16_CPPFLAGS = -DSLOT=16
+atomic_wait_free_32_SOURCES = atomic_wait_free.c main.c
+atomic_wait_free_32_CPPFLAGS = -DSLOT=32
+atomic_wait_free_64_SOURCES = atomic_wait_free.c main.c
+atomic_wait_free_64_CPPFLAGS = -DSLOT=64
 
 pthread_mutex_SOURCES = pthread_mutex.c main.c
 atomic_mutex1_SOURCES = atomic_mutex1.c main.c
