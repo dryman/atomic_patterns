@@ -5,7 +5,7 @@ All programs below support command line flag:
 
 1. `-c <cycles>` cycles are measured in power of 2. For example `-c 1` will
 be 2 cycles, `-c 10` will be 1024 cycles.
-2. `-t <threads> number of threads
+2. `-t <threads>` number of threads
 
 ### No contention tests
 
