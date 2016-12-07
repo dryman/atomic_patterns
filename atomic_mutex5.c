@@ -7,30 +7,35 @@
 #include <inttypes.h>
 #include <stdbool.h>
 #include <stdatomic.h>
+#include "op_atomic.h"
 
-static atomic_bool lock = false;
-extern uint64_t count;
+a_uint32_t thread_count = 0;
+static atomic_bool lock[SLOT] = {};
+extern uint64_t counts[];
 
 void* test(void *arg)
 {
   const int power2 = *(int*) arg;
   uint64_t bound = 1L << power2;
   bool expected_bool = false;
+  uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
+                                           memory_order_relaxed);
+  uint32_t slot = tid % SLOT;
   for (uint64_t i = 0; i < bound; i++)
     {
       while (1)
         {
           expected_bool = false;
-          while (atomic_load_explicit(&lock, memory_order_relaxed))
+          while (atomic_load_explicit(&lock[slot], memory_order_relaxed))
             ;
           if (atomic_compare_exchange_weak_explicit(
-              &lock, &expected_bool, true,
+              &lock[slot], &expected_bool, true,
               memory_order_acquire,
               memory_order_relaxed))
             break;
         }
-      count++;
-      atomic_store_explicit(&lock, false, memory_order_release);
+      counts[slot]++;
+      atomic_store_explicit(&lock[slot], false, memory_order_release);
     }
   return NULL;
 }

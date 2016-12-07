@@ -11,14 +11,18 @@
 #include <unistd.h>
 
 ATOMIC_HACK_DECLARE
-extern uint64_t count;
-a_int32_t lock = 0;
+a_uint32_t thread_count = 0;
+extern uint64_t counts[];
+a_int32_t lock[SLOT] = {};
 
 void* test(void *arg)
 {
   const int power2 = *(int*) arg;
   uint64_t bound = 1L << power2;
   uint64_t mask = (1L << 4)-1;  // 1/16 use write lock, else read lock
+  uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
+                                           memory_order_relaxed);
+  uint32_t slot = tid % SLOT;
 
   for (uint64_t i = 0; i < bound; i++)
     {
@@ -27,16 +31,16 @@ void* test(void *arg)
           while (1)
             {
               // book write
-              int32_t val = atomic_load_explicit(&lock, memory_order_relaxed);
+              int32_t val = atomic_load_explicit(&lock[slot], memory_order_relaxed);
               while (!atomic_compare_exchange_weak_explicit
-                     (&lock, &val, val | (1<<31),
+                     (&lock[slot], &val, val | (1<<31),
                       memory_order_acq_rel,
                       memory_order_relaxed))
                 ;
                 //val = atomic_load_explicit(&lock, memory_order_relaxed);
               val = INT32_MIN;
               while (atomic_compare_exchange_strong_explicit
-                     (&lock, &val, -1,
+                     (&lock[slot], &val, -1,
                       memory_order_acquire,
                       memory_order_relaxed))
                 {
@@ -45,8 +49,8 @@ void* test(void *arg)
                 }
               break;
             }
-          count++;
-          atomic_store_explicit(&lock, 0, memory_order_release);
+          counts[slot]++;
+          atomic_store_explicit(&lock[slot], 0, memory_order_release);
         }
       else
         { // read lock
@@ -55,19 +59,19 @@ void* test(void *arg)
               int32_t val; 
               do
                 {
-                  val = atomic_load_explicit(&lock,
+                  val = atomic_load_explicit(&lock[slot],
                                              memory_order_relaxed);
                   if (val < 0)
                     continue;
                 }
               while (!atomic_compare_exchange_weak_explicit
-                     (&lock, &val, val + 1,
+                     (&lock[slot], &val, val + 1,
                       memory_order_acquire,
                       memory_order_relaxed));
                 break;
             }
           asm("nop");
-          atomic_fetch_sub_explicit(&lock, 1, memory_order_release);
+          atomic_fetch_sub_explicit(&lock[slot], 1, memory_order_release);
         }
     }
   return NULL;

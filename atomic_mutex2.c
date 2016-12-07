@@ -6,9 +6,11 @@
 #include <stdint.h>
 #include <inttypes.h>
 #include <stdbool.h>
-#include <stdatomic.h>
+#include "op_atomic.h"
 
-static atomic_bool lock = false;
+a_uint32_t thread_count = 0;
+static atomic_bool lock[SLOT] = {};
+extern uint64_t counts[];
 ATOMIC_HACK_DECLARE
 extern uint64_t count;
 
@@ -17,18 +19,21 @@ void* test(void *arg)
   const int power2 = *(int*) arg;
   uint64_t bound = 1L << power2;
   bool expected_bool = false;
+  uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
+                                           memory_order_relaxed);
+  uint32_t slot = tid % SLOT;
   for (uint64_t i = 0; i < bound; i++)
     {
       while (!atomic_compare_exchange_strong_explicit(
-        &lock, &expected_bool, true,
+        &lock[slot], &expected_bool, true,
         memory_order_acquire,
         memory_order_relaxed))
         {
           expected_bool = false;
           ATOMIC_HACK_OP;
         }
-      count++;
-      atomic_store_explicit(&lock, false, memory_order_release);
+      counts[slot]++;
+      atomic_store_explicit(&lock[slot], false, memory_order_release);
     }
   return NULL;
 }
