@@ -64,8 +64,7 @@ pthread_rwlock_64 \
 atomic_rwlock_64 \
 atomic_punch_card_64 \
 atomic_rwlock2 \
-atomic_cas \
-atomic_cas_handtune
+atomic_cas
 
 nc_thread_local_SOURCES = nc_thread_local.c main.c
 nc_address_SOURCES = nc_address.c main.c
@@ -194,7 +193,6 @@ atomic_rwlock_64_CPPFLAGS = -DSLOT=64
 atomic_punch_card_64_CPPFLAGS = -DSLOT=64
 
 atomic_cas_SOURCES = atomic_cas.c main.c
-atomic_cas_handtune_SOURCES = atomic_cas_handtune.s main.c
 atomic_rwlock2_SOURCES = atomic_rwlock2.c main.c
 
 if ATOMIC_HACK

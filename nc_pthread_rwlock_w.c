@@ -11,6 +11,12 @@
 a_uint32_t thread_count = 0;
 static pthread_rwlock_t rwlock[4096];
 
+void setup(int num_threads)
+{
+  for (int i = 0; i < num_threads; i++)
+    pthread_rwlock_init(&rwlock[i], NULL);
+}
+
 void* test(void *arg)
 {
   for (int i = 0; i < 4096; i++)

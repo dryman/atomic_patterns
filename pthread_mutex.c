@@ -11,6 +11,8 @@ a_uint32_t thread_count = 0;
 extern uint64_t counts[];
 static pthread_mutex_t mutex[SLOT];
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

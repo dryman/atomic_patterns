@@ -11,6 +11,8 @@
 a_uint32_t thread_count = 0;
 static atomic_bool lock[4096] = {};
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

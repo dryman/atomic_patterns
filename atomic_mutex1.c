@@ -13,6 +13,8 @@ static atomic_bool lock[SLOT] = {};
 extern uint64_t counts[];
 ATOMIC_HACK_DECLARE
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

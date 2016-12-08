@@ -8,6 +8,7 @@
 #include <stdbool.h>
 
 extern void* test(void* arg);
+extern void setup(int num_threads);
 
 uint64_t count = 0;
 uint64_t counts[128];
@@ -45,6 +46,7 @@ int main(int argc, char* argv[])
   if (fix_prob)
     cycle /= num_threads;
 
+  setup(num_threads);
   for (int i = 0; i < num_threads; i++)
     pthread_create(&threads[i], NULL, &test, &cycle);
 

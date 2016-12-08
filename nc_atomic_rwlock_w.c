@@ -14,6 +14,8 @@ ATOMIC_HACK_DECLARE
 a_uint32_t thread_count = 0;
 a_int32_t lock[4096] = {};
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   const int power2 = *(int*) arg;

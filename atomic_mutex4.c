@@ -12,6 +12,8 @@ a_uint32_t thread_count = 0;
 static atomic_flag lock[SLOT] = {ATOMIC_FLAG_INIT};
 extern uint64_t counts[];
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

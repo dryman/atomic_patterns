@@ -12,6 +12,12 @@ a_uint32_t thread_count = 0;
 extern uint64_t counts[];
 static pthread_rwlock_t rwlock[SLOT];
 
+void setup(int num_threads)
+{
+  for (int i = 0; i < num_threads; i++)
+    pthread_rwlock_init(&rwlock[i], NULL);
+}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

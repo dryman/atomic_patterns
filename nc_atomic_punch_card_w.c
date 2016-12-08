@@ -14,6 +14,8 @@ ATOMIC_HACK_DECLARE
 a_uint32_t thread_count = 0;
 static a_int32_t pcard[4096] = {};
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

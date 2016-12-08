@@ -15,6 +15,8 @@ extern uint64_t count;
 a_int32_t lock = 0;
 a_uint32_t tid_counter = 0;
 
+void setup(int num_threads) {}
+
 void* test(void *arg)
 {
   uint64_t bound = *(uint64_t*)arg;

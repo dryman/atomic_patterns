@@ -8,6 +8,8 @@
 a_uint32_t thread_count = 0;
 static a_uint64_t atomic_counter[SLOT] = {};
 
+void setup(int num_threads) {}
+
 void* test(void* arg)
 {
   uint64_t bound = *(uint64_t*)arg;
