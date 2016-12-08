@@ -17,8 +17,7 @@ a_uint32_t tid_counter = 0;
 
 void* test(void *arg)
 {
-  const int power2 = *(int*) arg;
-  uint64_t bound = 1L << power2;
+  uint64_t bound = *(uint64_t*)arg;
   uint64_t mask = (1L << 4)-1;  // 1/16 use write lock, else read lock
   uint32_t tid = atomic_fetch_add(&tid_counter, 1);
   char file_name [20];

@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <stdint.h>
 #include <inttypes.h>
+#include <stdbool.h>
 
 extern void* test(void* arg);
 
@@ -14,10 +16,11 @@ int main(int argc, char* argv[])
 {
   int num_threads = 1;
   int cycle_power = 0;
+  bool fix_prob = false;
 
   int c;
   
-  while ((c = getopt(argc, argv, "t:c:")) != -1)
+  while ((c = getopt(argc, argv, "ft:c:")) != -1)
     {
       switch (c)
         {
@@ -27,6 +30,9 @@ int main(int argc, char* argv[])
         case 'c':
           cycle_power = atoi(optarg);
           break;
+        case 'f':
+          fix_prob = true;
+          break;
         default:
           abort();
         }
@@ -35,8 +41,12 @@ int main(int argc, char* argv[])
   printf("num_threads: %d, cycle_power: %d\n", num_threads, cycle_power);
 
   pthread_t threads[num_threads];
+  uint64_t cycle = 1L << cycle_power;
+  if (fix_prob)
+    cycle /= num_threads;
+
   for (int i = 0; i < num_threads; i++)
-    pthread_create(&threads[i], NULL, &test, &cycle_power);
+    pthread_create(&threads[i], NULL, &test, &cycle);
 
   for (int i = 0; i < num_threads; i++)
     pthread_join(threads[i], NULL);

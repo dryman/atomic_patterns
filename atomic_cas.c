@@ -11,8 +11,7 @@ static a_uint64_t atomic_counter = 0;
 
 void* test(void* arg)
 {
-  const int power2 = *(int*) arg;
-  uint64_t bound = 1L << power2;
+  uint64_t bound = *(uint64_t*)arg;
   uint64_t old_val;
   for (uint64_t i = 0; i < bound; i++)
     {

@@ -14,8 +14,7 @@ ATOMIC_HACK_DECLARE
 
 void* test(void *arg)
 {
-  const int power2 = *(int*) arg;
-  uint64_t bound = 1L << power2;
+  uint64_t bound = *(uint64_t*)arg;
   uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
                                            memory_order_relaxed);
   bool expected_bool = false;

@@ -17,8 +17,7 @@ void* test(void *arg)
     pthread_rwlock_init(&rwlock[i], NULL);
   uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
                                            memory_order_relaxed);
-  const int power2 = *(int*) arg;
-  uint64_t bound = 1L << power2;
+  uint64_t bound = *(uint64_t*)arg;
   for (uint64_t i = 0; i < bound; i++)
     {
       pthread_rwlock_wrlock(&rwlock[tid]);
