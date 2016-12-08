@@ -10,7 +10,7 @@
 
 a_uint32_t thread_count = 0;
 static atomic_bool lock[SLOT] = {};
-extern uint64_t counts[];
+extern uint64_t counts[128];
 ATOMIC_HACK_DECLARE
 
 void setup(int num_threads) {}

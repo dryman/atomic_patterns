@@ -19,8 +19,6 @@ void setup(int num_threads)
 
 void* test(void *arg)
 {
-  for (int i = 0; i < 4096; i++)
-    pthread_rwlock_init(&rwlock[i], NULL);
   uint32_t tid = atomic_fetch_add_explicit(&thread_count, 1,
                                            memory_order_relaxed);
   uint64_t bound = *(uint64_t*)arg;

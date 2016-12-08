@@ -58,6 +58,6 @@ nc_atomic_punch_card_w
 for program in ${PROGRAMS[@]}; do
   echo $program
   for i in `seq 1 $REPEAT`; do
-    perf stat -o "$TARGET/${program}_${THREAD}" --append ./$program -c $CYCLE -t $THREAD $FIX_PROB
+    perf stat -o "$TARGET/${program}_${THREAD}${FIX_PROB}" --append ./$program -c $CYCLE -t $THREAD $FIX_PROB
   done
 done
