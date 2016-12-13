@@ -9,7 +9,7 @@
 #include "op_atomic.h"
 
 a_uint32_t thread_count = 0;
-static atomic_bool lock[4096] = {};
+static a_uint8_t lock[4096] = {};
 
 void* test(void *arg)
 {
