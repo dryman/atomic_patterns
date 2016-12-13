@@ -10,7 +10,7 @@
 #include "op_atomic.h"
 
 a_uint32_t thread_count = 0;
-static atomic_bool lock[SLOT] = {};
+static a_uint8_t lock[SLOT] = {};
 extern uint64_t counts[];
 
 void* test(void *arg)
