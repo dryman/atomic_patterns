@@ -1,0 +1,180 @@
+# started on Fri Dec 16 05:15:34 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+       1026.370399      task-clock (msec)         #    6.111 CPUs utilized          
+                 9      context-switches          #    0.009 K/sec                  
+                12      cpu-migrations            #    0.012 K/sec                  
+                76      page-faults               #    0.074 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.167967149 seconds time elapsed
+
+# started on Fri Dec 16 05:15:34 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+       1078.302857      task-clock (msec)         #    6.227 CPUs utilized          
+                 2      context-switches          #    0.002 K/sec                  
+                 9      cpu-migrations            #    0.008 K/sec                  
+                76      page-faults               #    0.070 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.173166092 seconds time elapsed
+
+# started on Fri Dec 16 05:15:34 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+       1006.306998      task-clock (msec)         #    5.955 CPUs utilized          
+                 2      context-switches          #    0.002 K/sec                  
+                 9      cpu-migrations            #    0.009 K/sec                  
+                75      page-faults               #    0.075 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.168971931 seconds time elapsed
+
+# started on Fri Dec 16 05:15:34 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+        968.449073      task-clock (msec)         #    5.912 CPUs utilized          
+                 4      context-switches          #    0.004 K/sec                  
+                10      cpu-migrations            #    0.010 K/sec                  
+                76      page-faults               #    0.078 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.163807601 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+        914.950473      task-clock (msec)         #    5.179 CPUs utilized          
+                 9      context-switches          #    0.010 K/sec                  
+                11      cpu-migrations            #    0.012 K/sec                  
+                77      page-faults               #    0.084 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.176674995 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+       1015.072309      task-clock (msec)         #    6.633 CPUs utilized          
+                 2      context-switches          #    0.002 K/sec                  
+                 9      cpu-migrations            #    0.009 K/sec                  
+                76      page-faults               #    0.075 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.153039839 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+       1013.876709      task-clock (msec)         #    6.367 CPUs utilized          
+                 7      context-switches          #    0.007 K/sec                  
+                 9      cpu-migrations            #    0.009 K/sec                  
+                75      page-faults               #    0.074 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.159243662 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+        780.968175      task-clock (msec)         #    5.603 CPUs utilized          
+                 6      context-switches          #    0.008 K/sec                  
+                 9      cpu-migrations            #    0.012 K/sec                  
+                76      page-faults               #    0.097 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.139394196 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+        843.824591      task-clock (msec)         #    5.322 CPUs utilized          
+                 8      context-switches          #    0.009 K/sec                  
+                10      cpu-migrations            #    0.012 K/sec                  
+                76      page-faults               #    0.090 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.158546587 seconds time elapsed
+
+# started on Fri Dec 16 05:15:35 2016
+
+
+ Performance counter stats for './nc_pthread_mutex -c 20 -t 9':
+
+        999.931969      task-clock (msec)         #    5.971 CPUs utilized          
+                 1      context-switches          #    0.001 K/sec                  
+                 9      cpu-migrations            #    0.009 K/sec                  
+                77      page-faults               #    0.077 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.167454625 seconds time elapsed
+

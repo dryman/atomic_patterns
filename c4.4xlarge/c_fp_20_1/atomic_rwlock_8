@@ -1,0 +1,180 @@
+# started on Fri Dec 16 05:28:41 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        305.398539      task-clock (msec)         #    5.150 CPUs utilized          
+                 4      context-switches          #    0.013 K/sec                  
+                 8      cpu-migrations            #    0.026 K/sec                  
+                73      page-faults               #    0.239 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.059296297 seconds time elapsed
+
+# started on Fri Dec 16 05:28:41 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        643.015447      task-clock (msec)         #    6.977 CPUs utilized          
+                 3      context-switches          #    0.005 K/sec                  
+                 8      cpu-migrations            #    0.012 K/sec                  
+                73      page-faults               #    0.114 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.092158749 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        317.976363      task-clock (msec)         #    4.600 CPUs utilized          
+                11      context-switches          #    0.035 K/sec                  
+                12      cpu-migrations            #    0.038 K/sec                  
+                74      page-faults               #    0.233 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.069130038 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        284.815285      task-clock (msec)         #    4.447 CPUs utilized          
+                10      context-switches          #    0.035 K/sec                  
+                10      cpu-migrations            #    0.035 K/sec                  
+                72      page-faults               #    0.253 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.064047866 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        718.601748      task-clock (msec)         #    7.572 CPUs utilized          
+                 5      context-switches          #    0.007 K/sec                  
+                 8      cpu-migrations            #    0.011 K/sec                  
+                74      page-faults               #    0.103 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.094902823 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        698.517270      task-clock (msec)         #    7.510 CPUs utilized          
+                 4      context-switches          #    0.006 K/sec                  
+                 8      cpu-migrations            #    0.011 K/sec                  
+                73      page-faults               #    0.105 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.093008930 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        438.361607      task-clock (msec)         #    6.544 CPUs utilized          
+                 6      context-switches          #    0.014 K/sec                  
+                 8      cpu-migrations            #    0.018 K/sec                  
+                73      page-faults               #    0.167 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.066983309 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        481.817021      task-clock (msec)         #    5.800 CPUs utilized          
+                 4      context-switches          #    0.008 K/sec                  
+                10      cpu-migrations            #    0.021 K/sec                  
+                73      page-faults               #    0.152 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.083069077 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        402.278752      task-clock (msec)         #    6.025 CPUs utilized          
+                 6      context-switches          #    0.015 K/sec                  
+                 8      cpu-migrations            #    0.020 K/sec                  
+                73      page-faults               #    0.181 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.066763596 seconds time elapsed
+
+# started on Fri Dec 16 05:28:42 2016
+
+
+ Performance counter stats for './atomic_rwlock -c 20 -t 8 -f':
+
+        731.579417      task-clock (msec)         #    7.370 CPUs utilized          
+                 2      context-switches          #    0.003 K/sec                  
+                 8      cpu-migrations            #    0.011 K/sec                  
+                74      page-faults               #    0.101 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.099264000 seconds time elapsed
+

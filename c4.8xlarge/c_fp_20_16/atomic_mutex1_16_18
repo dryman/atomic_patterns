@@ -1,0 +1,180 @@
+# started on Fri Dec 16 08:16:35 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1899.102844      task-clock (msec)         #   16.370 CPUs utilized          
+                 9      context-switches          #    0.005 K/sec                  
+                21      cpu-migrations            #    0.011 K/sec                  
+                94      page-faults               #    0.049 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.116014562 seconds time elapsed
+
+# started on Fri Dec 16 08:16:35 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1330.718074      task-clock (msec)         #   14.682 CPUs utilized          
+                16      context-switches          #    0.012 K/sec                  
+                24      cpu-migrations            #    0.018 K/sec                  
+                94      page-faults               #    0.071 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.090637570 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1119.198415      task-clock (msec)         #   14.614 CPUs utilized          
+                13      context-switches          #    0.012 K/sec                  
+                21      cpu-migrations            #    0.019 K/sec                  
+                94      page-faults               #    0.084 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.076584389 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1382.619193      task-clock (msec)         #   15.554 CPUs utilized          
+                 5      context-switches          #    0.004 K/sec                  
+                22      cpu-migrations            #    0.016 K/sec                  
+                94      page-faults               #    0.068 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.088889831 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1516.250783      task-clock (msec)         #   16.155 CPUs utilized          
+                 6      context-switches          #    0.004 K/sec                  
+                22      cpu-migrations            #    0.015 K/sec                  
+                93      page-faults               #    0.061 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.093856373 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1191.304672      task-clock (msec)         #   15.358 CPUs utilized          
+                 8      context-switches          #    0.007 K/sec                  
+                20      cpu-migrations            #    0.017 K/sec                  
+                95      page-faults               #    0.080 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.077570200 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1439.720201      task-clock (msec)         #   15.573 CPUs utilized          
+                 7      context-switches          #    0.005 K/sec                  
+                23      cpu-migrations            #    0.016 K/sec                  
+                94      page-faults               #    0.065 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.092449645 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+        970.073214      task-clock (msec)         #   12.844 CPUs utilized          
+                13      context-switches          #    0.013 K/sec                  
+                23      cpu-migrations            #    0.024 K/sec                  
+                95      page-faults               #    0.098 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.075525751 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1708.937931      task-clock (msec)         #   16.318 CPUs utilized          
+                12      context-switches          #    0.007 K/sec                  
+                24      cpu-migrations            #    0.014 K/sec                  
+                95      page-faults               #    0.056 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.104726193 seconds time elapsed
+
+# started on Fri Dec 16 08:16:36 2016
+
+
+ Performance counter stats for './atomic_mutex1_16 -c 20 -t 18 -f':
+
+       1377.465888      task-clock (msec)         #   15.821 CPUs utilized          
+                 9      context-switches          #    0.007 K/sec                  
+                19      cpu-migrations            #    0.014 K/sec                  
+                95      page-faults               #    0.069 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.087066659 seconds time elapsed
+

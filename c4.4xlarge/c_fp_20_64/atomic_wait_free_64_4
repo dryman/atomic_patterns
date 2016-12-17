@@ -1,0 +1,180 @@
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         56.124270      task-clock (msec)         #    3.615 CPUs utilized          
+                 2      context-switches          #    0.036 K/sec                  
+                 4      cpu-migrations            #    0.071 K/sec                  
+                66      page-faults               #    0.001 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.015527278 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         38.055408      task-clock (msec)         #    2.697 CPUs utilized          
+                 2      context-switches          #    0.053 K/sec                  
+                 4      cpu-migrations            #    0.105 K/sec                  
+                66      page-faults               #    0.002 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.014108195 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         75.759248      task-clock (msec)         #    3.780 CPUs utilized          
+                 2      context-switches          #    0.026 K/sec                  
+                 4      cpu-migrations            #    0.053 K/sec                  
+                65      page-faults               #    0.858 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.020040316 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         76.186700      task-clock (msec)         #    3.729 CPUs utilized          
+                 6      context-switches          #    0.079 K/sec                  
+                 4      cpu-migrations            #    0.053 K/sec                  
+                64      page-faults               #    0.840 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.020430660 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         66.522758      task-clock (msec)         #    3.765 CPUs utilized          
+                 2      context-switches          #    0.030 K/sec                  
+                 4      cpu-migrations            #    0.060 K/sec                  
+                66      page-faults               #    0.992 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.017669836 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         76.029546      task-clock (msec)         #    3.826 CPUs utilized          
+                 2      context-switches          #    0.026 K/sec                  
+                 4      cpu-migrations            #    0.053 K/sec                  
+                65      page-faults               #    0.855 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.019873299 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         73.454285      task-clock (msec)         #    3.716 CPUs utilized          
+                 3      context-switches          #    0.041 K/sec                  
+                 4      cpu-migrations            #    0.054 K/sec                  
+                66      page-faults               #    0.899 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.019766940 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         72.550874      task-clock (msec)         #    3.788 CPUs utilized          
+                 1      context-switches          #    0.014 K/sec                  
+                 4      cpu-migrations            #    0.055 K/sec                  
+                65      page-faults               #    0.896 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.019154385 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         64.792351      task-clock (msec)         #    3.726 CPUs utilized          
+                 3      context-switches          #    0.046 K/sec                  
+                 4      cpu-migrations            #    0.062 K/sec                  
+                65      page-faults               #    0.001 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.017388888 seconds time elapsed
+
+# started on Fri Dec 16 05:47:04 2016
+
+
+ Performance counter stats for './atomic_wait_free_64 -c 20 -t 4 -f':
+
+         68.756376      task-clock (msec)         #    3.785 CPUs utilized          
+                 1      context-switches          #    0.015 K/sec                  
+                 4      cpu-migrations            #    0.058 K/sec                  
+                66      page-faults               #    0.960 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.018165214 seconds time elapsed
+

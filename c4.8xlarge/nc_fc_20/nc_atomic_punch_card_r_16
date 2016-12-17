@@ -1,0 +1,180 @@
+# started on Fri Dec 16 06:48:02 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      14655.513769      task-clock (msec)         #   14.474 CPUs utilized          
+               124      context-switches          #    0.008 K/sec                  
+                92      cpu-migrations            #    0.006 K/sec                  
+               128      page-faults               #    0.009 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.012567572 seconds time elapsed
+
+# started on Fri Dec 16 06:48:03 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13736.404494      task-clock (msec)         #   13.260 CPUs utilized          
+                32      context-switches          #    0.002 K/sec                  
+                30      cpu-migrations            #    0.002 K/sec                  
+               129      page-faults               #    0.009 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.035937299 seconds time elapsed
+
+# started on Fri Dec 16 06:48:04 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13517.858476      task-clock (msec)         #   13.088 CPUs utilized          
+                30      context-switches          #    0.002 K/sec                  
+                32      cpu-migrations            #    0.002 K/sec                  
+               130      page-faults               #    0.010 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.032876121 seconds time elapsed
+
+# started on Fri Dec 16 06:48:05 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13576.145398      task-clock (msec)         #   13.283 CPUs utilized          
+                61      context-switches          #    0.004 K/sec                  
+                55      cpu-migrations            #    0.004 K/sec                  
+                92      page-faults               #    0.007 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.022037450 seconds time elapsed
+
+# started on Fri Dec 16 06:48:06 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13256.291293      task-clock (msec)         #   13.307 CPUs utilized          
+                41      context-switches          #    0.003 K/sec                  
+                21      cpu-migrations            #    0.002 K/sec                  
+                91      page-faults               #    0.007 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.996204687 seconds time elapsed
+
+# started on Fri Dec 16 06:48:07 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13433.837034      task-clock (msec)         #   12.581 CPUs utilized          
+                26      context-switches          #    0.002 K/sec                  
+                24      cpu-migrations            #    0.002 K/sec                  
+               128      page-faults               #    0.010 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.067800679 seconds time elapsed
+
+# started on Fri Dec 16 06:48:08 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13251.709459      task-clock (msec)         #   11.724 CPUs utilized          
+               115      context-switches          #    0.009 K/sec                  
+               114      cpu-migrations            #    0.009 K/sec                  
+               133      page-faults               #    0.010 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       1.130327306 seconds time elapsed
+
+# started on Fri Dec 16 06:48:09 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13177.655151      task-clock (msec)         #   13.831 CPUs utilized          
+               103      context-switches          #    0.008 K/sec                  
+                97      cpu-migrations            #    0.007 K/sec                  
+                91      page-faults               #    0.007 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.952769642 seconds time elapsed
+
+# started on Fri Dec 16 06:48:10 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      12097.776556      task-clock (msec)         #   12.249 CPUs utilized          
+                48      context-switches          #    0.004 K/sec                  
+                35      cpu-migrations            #    0.003 K/sec                  
+                91      page-faults               #    0.008 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.987679621 seconds time elapsed
+
+# started on Fri Dec 16 06:48:11 2016
+
+
+ Performance counter stats for './nc_atomic_punch_card_r -c 20 -t 16':
+
+      13030.355659      task-clock (msec)         #   14.147 CPUs utilized          
+               101      context-switches          #    0.008 K/sec                  
+                89      cpu-migrations            #    0.007 K/sec                  
+                92      page-faults               #    0.007 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.921057341 seconds time elapsed
+

@@ -1,0 +1,180 @@
+# started on Fri Dec 16 06:02:00 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1047.405703      task-clock (msec)         #    4.960 CPUs utilized          
+                 9      context-switches          #    0.009 K/sec                  
+                13      cpu-migrations            #    0.012 K/sec                  
+                75      page-faults               #    0.072 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.211166017 seconds time elapsed
+
+# started on Fri Dec 16 06:02:00 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1491.164719      task-clock (msec)         #    4.648 CPUs utilized          
+                 7      context-switches          #    0.005 K/sec                  
+                12      cpu-migrations            #    0.008 K/sec                  
+                75      page-faults               #    0.050 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.320791772 seconds time elapsed
+
+# started on Fri Dec 16 06:02:01 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1037.971806      task-clock (msec)         #    4.831 CPUs utilized          
+                17      context-switches          #    0.016 K/sec                  
+                15      cpu-migrations            #    0.014 K/sec                  
+                74      page-faults               #    0.071 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.214858799 seconds time elapsed
+
+# started on Fri Dec 16 06:02:01 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1660.289238      task-clock (msec)         #    4.331 CPUs utilized          
+                 8      context-switches          #    0.005 K/sec                  
+                12      cpu-migrations            #    0.007 K/sec                  
+                74      page-faults               #    0.045 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.383352229 seconds time elapsed
+
+# started on Fri Dec 16 06:02:01 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1462.741022      task-clock (msec)         #    4.414 CPUs utilized          
+                 4      context-switches          #    0.003 K/sec                  
+                 9      cpu-migrations            #    0.006 K/sec                  
+                75      page-faults               #    0.051 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.331389451 seconds time elapsed
+
+# started on Fri Dec 16 06:02:02 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1577.660371      task-clock (msec)         #    4.949 CPUs utilized          
+                19      context-switches          #    0.012 K/sec                  
+                11      cpu-migrations            #    0.007 K/sec                  
+                76      page-faults               #    0.048 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.318795911 seconds time elapsed
+
+# started on Fri Dec 16 06:02:02 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1404.174751      task-clock (msec)         #    4.110 CPUs utilized          
+                10      context-switches          #    0.007 K/sec                  
+                16      cpu-migrations            #    0.011 K/sec                  
+                75      page-faults               #    0.053 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.341613685 seconds time elapsed
+
+# started on Fri Dec 16 06:02:02 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1419.774839      task-clock (msec)         #    4.662 CPUs utilized          
+                10      context-switches          #    0.007 K/sec                  
+                14      cpu-migrations            #    0.010 K/sec                  
+                75      page-faults               #    0.053 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.304555780 seconds time elapsed
+
+# started on Fri Dec 16 06:02:03 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+        976.531988      task-clock (msec)         #    4.370 CPUs utilized          
+                16      context-switches          #    0.016 K/sec                  
+                17      cpu-migrations            #    0.017 K/sec                  
+                74      page-faults               #    0.076 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.223443521 seconds time elapsed
+
+# started on Fri Dec 16 06:02:03 2016
+
+
+ Performance counter stats for './pthread_rwlock_16 -c 23 -t 9 -f':
+
+       1539.613589      task-clock (msec)         #    4.650 CPUs utilized          
+                 5      context-switches          #    0.003 K/sec                  
+                 9      cpu-migrations            #    0.006 K/sec                  
+                75      page-faults               #    0.049 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.331134655 seconds time elapsed
+

@@ -1,0 +1,180 @@
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          6.461668      task-clock (msec)         #    1.547 CPUs utilized          
+                 7      context-switches          #    0.001 M/sec                  
+                12      cpu-migrations            #    0.002 M/sec                  
+                75      page-faults               #    0.012 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.004178047 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          7.228507      task-clock (msec)         #    2.104 CPUs utilized          
+                 5      context-switches          #    0.692 K/sec                  
+                10      cpu-migrations            #    0.001 M/sec                  
+                76      page-faults               #    0.011 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.003435304 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          6.969658      task-clock (msec)         #    1.465 CPUs utilized          
+                 6      context-switches          #    0.861 K/sec                  
+                 9      cpu-migrations            #    0.001 M/sec                  
+                74      page-faults               #    0.011 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.004757529 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          7.646640      task-clock (msec)         #    1.618 CPUs utilized          
+                 7      context-switches          #    0.915 K/sec                  
+                10      cpu-migrations            #    0.001 M/sec                  
+                76      page-faults               #    0.010 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.004726645 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          5.562899      task-clock (msec)         #    1.698 CPUs utilized          
+                10      context-switches          #    0.002 M/sec                  
+                13      cpu-migrations            #    0.002 M/sec                  
+                75      page-faults               #    0.013 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.003277060 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          7.180063      task-clock (msec)         #    2.725 CPUs utilized          
+                 5      context-switches          #    0.696 K/sec                  
+                10      cpu-migrations            #    0.001 M/sec                  
+                74      page-faults               #    0.010 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.002634924 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          6.831935      task-clock (msec)         #    1.789 CPUs utilized          
+                 6      context-switches          #    0.878 K/sec                  
+                11      cpu-migrations            #    0.002 M/sec                  
+                75      page-faults               #    0.011 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.003818306 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          4.984858      task-clock (msec)         #    1.617 CPUs utilized          
+                 7      context-switches          #    0.001 M/sec                  
+                10      cpu-migrations            #    0.002 M/sec                  
+                75      page-faults               #    0.015 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.003083327 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          5.734785      task-clock (msec)         #    2.166 CPUs utilized          
+                 7      context-switches          #    0.001 M/sec                  
+                10      cpu-migrations            #    0.002 M/sec                  
+                73      page-faults               #    0.013 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.002647750 seconds time elapsed
+
+# started on Fri Dec 16 06:40:14 2016
+
+
+ Performance counter stats for './nc_thread_local -c 20 -t 9':
+
+          5.684446      task-clock (msec)         #    2.611 CPUs utilized          
+                 6      context-switches          #    0.001 M/sec                  
+                10      cpu-migrations            #    0.002 M/sec                  
+                76      page-faults               #    0.013 M/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.002176744 seconds time elapsed
+

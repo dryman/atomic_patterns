@@ -1,0 +1,180 @@
+# started on Fri Dec 16 05:13:25 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        533.815339      task-clock (msec)         #    4.123 CPUs utilized          
+                 8      context-switches          #    0.015 K/sec                  
+                 8      cpu-migrations            #    0.015 K/sec                  
+                68      page-faults               #    0.127 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.129478531 seconds time elapsed
+
+# started on Fri Dec 16 05:13:25 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        669.058777      task-clock (msec)         #    4.808 CPUs utilized          
+                 2      context-switches          #    0.003 K/sec                  
+                 5      cpu-migrations            #    0.007 K/sec                  
+                69      page-faults               #    0.103 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.139163868 seconds time elapsed
+
+# started on Fri Dec 16 05:13:25 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        666.696392      task-clock (msec)         #    4.754 CPUs utilized          
+                10      context-switches          #    0.015 K/sec                  
+                 5      cpu-migrations            #    0.007 K/sec                  
+                67      page-faults               #    0.100 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.140235838 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        460.084983      task-clock (msec)         #    4.464 CPUs utilized          
+                 5      context-switches          #    0.011 K/sec                  
+                 6      cpu-migrations            #    0.013 K/sec                  
+                68      page-faults               #    0.148 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.103055148 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        447.587543      task-clock (msec)         #    4.546 CPUs utilized          
+                 2      context-switches          #    0.004 K/sec                  
+                 5      cpu-migrations            #    0.011 K/sec                  
+                69      page-faults               #    0.154 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.098447596 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        651.812139      task-clock (msec)         #    4.784 CPUs utilized          
+                 3      context-switches          #    0.005 K/sec                  
+                 7      cpu-migrations            #    0.011 K/sec                  
+                68      page-faults               #    0.104 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.136252687 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        608.974182      task-clock (msec)         #    4.899 CPUs utilized          
+                 2      context-switches          #    0.003 K/sec                  
+                 5      cpu-migrations            #    0.008 K/sec                  
+                68      page-faults               #    0.112 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.124311159 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        579.253911      task-clock (msec)         #    4.514 CPUs utilized          
+                 3      context-switches          #    0.005 K/sec                  
+                 5      cpu-migrations            #    0.009 K/sec                  
+                67      page-faults               #    0.116 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.128328388 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        485.300228      task-clock (msec)         #    4.123 CPUs utilized          
+                 4      context-switches          #    0.008 K/sec                  
+                 5      cpu-migrations            #    0.010 K/sec                  
+                69      page-faults               #    0.142 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.117715803 seconds time elapsed
+
+# started on Fri Dec 16 05:13:26 2016
+
+
+ Performance counter stats for './nc_atomic_mutex2 -c 20 -t 5':
+
+        676.462393      task-clock (msec)         #    4.859 CPUs utilized          
+                 4      context-switches          #    0.006 K/sec                  
+                 5      cpu-migrations            #    0.007 K/sec                  
+                69      page-faults               #    0.102 K/sec                  
+   <not supported>      cycles                   
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+   <not supported>      instructions             
+   <not supported>      branches                 
+   <not supported>      branch-misses            
+
+       0.139228889 seconds time elapsed
+
