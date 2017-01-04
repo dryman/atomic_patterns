@@ -24,6 +24,8 @@ atomic_mutex2 \
 atomic_mutex3 \
 atomic_mutex4 \
 atomic_mutex5 \
+atomic_mutex6 \
+atomic_mutex7 \
 pthread_mutex_8 \
 atomic_mutex1_8 \
 atomic_mutex2_8 \
@@ -98,12 +100,16 @@ atomic_mutex2_SOURCES = atomic_mutex2.c main.c
 atomic_mutex3_SOURCES = atomic_mutex3.c main.c
 atomic_mutex4_SOURCES = atomic_mutex4.c main.c
 atomic_mutex5_SOURCES = atomic_mutex5.c main.c
+atomic_mutex6_SOURCES = atomic_mutex6.c main.c
+atomic_mutex7_SOURCES = atomic_mutex6.c main.c
 pthread_mutex_CPPFLAGS = -DSLOT=1
 atomic_mutex1_CPPFLAGS = -DSLOT=1
 atomic_mutex2_CPPFLAGS = -DSLOT=1
 atomic_mutex3_CPPFLAGS = -DSLOT=1
 atomic_mutex4_CPPFLAGS = -DSLOT=1
 atomic_mutex5_CPPFLAGS = -DSLOT=1
+atomic_mutex6_CPPFLAGS = -DSLOT=1
+atomic_mutex7_CPPFLAGS = -DSLOT=1
 
 pthread_mutex_8_SOURCES = pthread_mutex.c main.c
 atomic_mutex1_8_SOURCES = atomic_mutex1.c main.c
