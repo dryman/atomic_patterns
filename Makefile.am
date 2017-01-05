@@ -1,3 +1,10 @@
+demo-test:
+	./atomic_mutex1 -t 8 -c 20
+	@ echo "---------------"
+	./atomic_mutex5 -t 8 -c 20
+	@ echo "---------------"
+	./pthread_mutex -t 8 -c 20
+
 bin_PROGRAMS = \
 nc_thread_local \
 nc_address \
