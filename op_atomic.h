@@ -51,6 +51,7 @@
 #include "stdatomic.h"
 #include "stdint.h"
 #include "stdbool.h"
+#include <immintrin.h>
 
 typedef _Atomic int8_t a_int8_t;
 typedef _Atomic int16_t a_int16_t;
@@ -110,7 +111,10 @@ atomic_check_in_8(a_int8_t* punch_card)
   do
     {
       if (val < 0)
+      {
+        _mm_pause();
         return false;
+      }
     }
   while (!atomic_compare_exchange_weak_explicit
          (punch_card, &val, val + 1,
@@ -127,7 +131,10 @@ atomic_check_in_16(a_int16_t* punch_card)
   do
     {
       if (val < 0)
+      {
+        _mm_pause();
         return false;
+      }
     }
   while (!atomic_compare_exchange_weak_explicit
          (punch_card, &val, val + 1,
@@ -144,7 +151,10 @@ atomic_check_in_32(a_int32_t* punch_card)
   do
     {
       if (val < 0)
+      {
+        _mm_pause();
         return false;
+      }
     }
   while (!atomic_compare_exchange_weak_explicit
          (punch_card, &val, val + 1,
@@ -161,7 +171,10 @@ atomic_check_in_64(a_int64_t* punch_card)
   do
     {
       if (val < 0)
+      {
+        _mm_pause();
         return false;
+      }
     }
   while (!atomic_compare_exchange_weak_explicit
          (punch_card, &val, val + 1,
