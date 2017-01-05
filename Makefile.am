@@ -26,6 +26,8 @@ atomic_mutex4 \
 atomic_mutex5 \
 atomic_mutex6 \
 atomic_mutex7 \
+atomic_mutex8 \
+atomic_mutex9 \
 tx_atomic1 \
 tx_atomic2 \
 pthread_mutex_8 \
@@ -103,7 +105,9 @@ atomic_mutex3_SOURCES = atomic_mutex3.c main.c
 atomic_mutex4_SOURCES = atomic_mutex4.c main.c
 atomic_mutex5_SOURCES = atomic_mutex5.c main.c
 atomic_mutex6_SOURCES = atomic_mutex6.c main.c
-atomic_mutex7_SOURCES = atomic_mutex6.c main.c
+atomic_mutex7_SOURCES = atomic_mutex7.c main.c
+atomic_mutex8_SOURCES = atomic_mutex8.c main.c
+atomic_mutex9_SOURCES = atomic_mutex9.c main.c
 tx_atomic1_SOURCES = tx_atomic1.c main.c
 tx_atomic2_SOURCES = tx_atomic2.c main.c
 pthread_mutex_CPPFLAGS = -DSLOT=1
@@ -114,6 +118,8 @@ atomic_mutex4_CPPFLAGS = -DSLOT=1
 atomic_mutex5_CPPFLAGS = -DSLOT=1
 atomic_mutex6_CPPFLAGS = -DSLOT=1
 atomic_mutex7_CPPFLAGS = -DSLOT=1
+atomic_mutex8_CPPFLAGS = -DSLOT=1
+atomic_mutex9_CPPFLAGS = -DSLOT=1
 tx_atomic1_CPPFLAGS = -DSLOT=1
 tx_atomic1_CFLAGS = -fgnu-tm
 tx_atomic1_LDFLAGS = -fgnu-tm
@@ -218,6 +224,7 @@ nc_atomic_rwlock_r_SOURCES += nop.c
 nc_atomic_rwlock_w_SOURCES += nop.c
 atomic_mutex1_SOURCES += nop.c
 atomic_mutex2_SOURCES += nop.c
+atomic_mutex8_SOURCES += nop.c
 atomic_mutex1_8_SOURCES += nop.c
 atomic_mutex2_8_SOURCES += nop.c
 atomic_mutex1_16_SOURCES += nop.c
