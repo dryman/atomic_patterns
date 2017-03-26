@@ -8,6 +8,28 @@
 #include <stdbool.h>
 #include <time.h>
 
+#ifdef __MACH__
+#include <mach/clock.h>
+#include <mach/mach.h>
+#endif
+
+
+void current_utc_time(struct timespec *ts) {
+
+#ifdef __MACH__ // OS X does not have clock_gettime, use clock_get_time
+  clock_serv_t cclock;
+  mach_timespec_t mts;
+  host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
+  clock_get_time(cclock, &mts);
+  mach_port_deallocate(mach_task_self(), cclock);
+  ts->tv_sec = mts.tv_sec;
+  ts->tv_nsec = mts.tv_nsec;
+#else
+  clock_gettime(CLOCK_REALTIME, ts);
+#endif
+
+}
+
 extern void* test(void* arg);
 extern void setup(int num_threads);
 
@@ -62,7 +84,7 @@ int main(int argc, char* argv[])
   if (fix_prob)
     cycle /= num_threads;
 
-  clock_gettime(CLOCK_REALTIME, &start);/* measurement: start */
+  current_utc_time(&start);/* measurement: start */
 
   setup(num_threads);
   for (int i = 0; i < num_threads; i++)
@@ -75,7 +97,7 @@ int main(int argc, char* argv[])
   for (int i = 0; i < 8; i++)
     printf("counts: %" PRIu64 "\n", counts[i]);
 
-  clock_gettime(CLOCK_REALTIME, &end); /* meansurement: end */
+  current_utc_time(&end); /* meansurement: end */
   cpu_time = diff_in_second(start, end);
 
   printf("\nexecution time: %lf sec\n", cpu_time);
